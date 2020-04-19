@@ -11,31 +11,64 @@
         <div class="logo">TravelTip</div>
        
         <ul class="main-nav flex clean-list">
-            <li><a href="#">Enter Location Here</a></li>
-            <li><a href="#">go</a></li>
+            <li>
+                <div > 
+                <input type="text" name="location" placeholder="Location goes here">
+               <button>go</button>
+
+            </div>
+            </li>
             <li><a href="#">My Location</a></li>
         </ul>
     </header>
-    <section class="location">
-        <div>Location:</div>
-    </section>
-    
-   <section class="main-container">
 
+    
+   <section class="main-container flex wrap space-between">
+       <div class="location flex space-between">
+           <h2>location:</h2>
+           <button>Copy location</button>
+       </div>
+       <div class="table-weather flex column">
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Info</th>
+            <th>Weather</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td>fdsf43</td>
+            <td>Tel-Aviv, dizingof 100</td>
+            <td>sunny</td>
+            <td><button>Delete</button>
+                <button>Update</button></td>
+          </tr>
+    </table>
+    <div class="weather-container"></div>
+</div>
+    <div class="map-container">
+        <section class="container" style="height: 500px;">
+        <div class="map" style="width:50%;height:500px; text-align: center;"></div>
+        
+        <p id="locationError"></p>
+    
+    </section></div>
    </section> 
 
-   <section class="container" style="height: 500px;">
-    <div class="map" style="width:50%;height:500px; text-align: center;"></div>
-    
-    <p id="locationError"></p>
+   
 
-</section>
 
+
+<script type="module" src="js/main.js"></script>
+   <footer>
+    © Adi&Tom  All rights reserved.
+   </footer>
 
 
    <script async defer
    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAomBI0lRzP0QpN31wTxSY3V8W8LRVYTHI&callback=mapReady">
    </script>
-<script type="module" src="js/main.js"></script>
+
+   
 </body>
 </html>
