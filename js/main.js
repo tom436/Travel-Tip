@@ -1,6 +1,6 @@
 
 
-// window.addEventListener('load', getPosition);
+window.addEventListener('load', getPosition);
 
 function getPosition() {
     if (!navigator.geolocation) {
