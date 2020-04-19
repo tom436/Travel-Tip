@@ -30,12 +30,16 @@ body{
     color: white;
 
 }
+
+.main-header .main-nav li {
+    display: flex;
+    align-items: center;
+}
 .main-header .main-nav li div{
     font-size: 1.5rem;
-    display: flex;
     height: 130px;
+    display: flex;
     align-items: center;
-
 }
 .main-header .main-nav li div input,.main-header .main-nav li div button{
     line-height: 2rem;
