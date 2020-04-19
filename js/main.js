@@ -1,6 +1,6 @@
 
 
-// window.addEventListener('load', getPosition);
+window.addEventListener('load', getPosition);
 
 function getPosition() {
     if (!navigator.geolocation) {
@@ -9,6 +9,7 @@ function getPosition() {
     }
     navigator.geolocation.getCurrentPosition(showMap, handleLocationError);
 }
+
 
 function showMap(position) {
     initMap(position.coords.latitude, position.coords.longitude);
@@ -36,7 +37,7 @@ function handleLocationError(error) {
 function initMap(lat, lng) {
     //            if (!lat) lat = 32.0749831;
     //            if (!lng) lat = 34.9120554;
-    var elMap = document.querySelector('.map');
+    var elMap = document.querySelector('.map-container');
     var options = {
         center: { lat, lng },
         zoom: 16
@@ -52,6 +53,23 @@ function initMap(lat, lng) {
         map,
         title: 'Hello World!'
     });
+    var myLatlng = {lat: lat, lng: lng};
+
+    var infoWindow = new google.maps.InfoWindow(
+        {content: 'Click the map to get Lat/Lng!', position: myLatlng});
+    infoWindow.open(map);
+
+    // Configure the click listener.
+    map.addListener('click', function(mapsMouseEvent) {
+      // Close the current InfoWindow.
+      infoWindow.close();
+
+      // Create a new InfoWindow.
+      infoWindow = new google.maps.InfoWindow({position: mapsMouseEvent.latLng});
+      infoWindow.setContent(mapsMouseEvent.latLng.toString());
+      console.log(mapsMouseEvent.latLng.toString());
+      
+      infoWindow.open(map);
+    });
+  
 }
-
-
