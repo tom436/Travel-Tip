@@ -1,21 +1,16 @@
 *{
-    margin: 0;
+    box-sizing: border-box;
+
 }
-
-
-
-
 
 body{
-    background-color: rgb(234, 241, 229);
+    background-color: rgb(236, 235, 235);
+    margin: 0;
+
 }
 
-
-
-
-
 .main-header {
-    background-color: rgb(85, 79, 79);
+    background-color: rgb(133, 123, 123);
     margin: 0 auto;
     color: rgb(255, 255, 255);
     padding-left: 2rem;
@@ -23,10 +18,8 @@ body{
     
 }
 
-
-
 .main-header .main-nav li{
-    margin-inline-end: 2rem;
+    margin-inline-end: 1.5rem;
     
 }
 .main-header .main-nav li a{
@@ -35,11 +28,96 @@ body{
     height: 130px;
     align-items: center;
     color: white;
+
+}
+.main-header .main-nav li div{
+    font-size: 1.5rem;
+    display: flex;
+    height: 130px;
+    align-items: center;
+
+}
+.main-header .main-nav li div input,.main-header .main-nav li div button{
+    line-height: 2rem;
+    border: none;
+    padding: 0 .5rem ;
+    border-radius: 3px;
+}
+
+.main-header .main-nav li a:hover{
+color: yellowgreen;
 }
 .main-header .logo{
     font-size: 2rem;
     align-self: center;
+    
 }
+
+.main-container{
+
+    display: flex;
+    box-sizing: unset;
+    max-width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 2rem
+    
+
+}
+.location{
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+}
+.table-weather{
+    margin-right: 2rem;
+
+}
+.main-container table{
+    border-collapse: collapse;
+    max-width: 10vw;
+    height: 15rem;
+    margin-bottom: 2rem;
+
+
+}
+td,th{
+    border: 1px solid;
+    padding: 1rem;
+
+}
+.main-container table td button{
+
+    background-color: rgb(0, 47, 255);
+    margin: 3px;
+    width: 100px;
+    
+}
+.map-container{
+    background-color: white;
+    width: 40vw;
+    border: 1px solid;
+
+}
+.weather-container{
+    background-color: white;
+    height: 15rem;
+    width: 100%;
+}
+
+
+footer{
+    margin:0;
+    width: 100%;
+    background-color: rgb(133, 123, 123);
+    height:13vh;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+
+
+
 /* helpers */
 .flex{
     display: flex;
@@ -47,13 +125,29 @@ body{
 .space-between{
     justify-content: space-between;
 }
+.wrap{
+    flex-wrap: wrap;
+}
+.column{
+    flex-direction: column;
+}
 
 .clean-list{
     list-style: none;
     border: none;
     padding: 0;
 }
+
+
 a{
    text-decoration: none;
    
+}
+button{
+    cursor: pointer;
+    background-color: rgb(99, 104, 93);
+    border: none;
+    border-radius: 6px;
+    padding: 15px;
+    color: white;
 }
